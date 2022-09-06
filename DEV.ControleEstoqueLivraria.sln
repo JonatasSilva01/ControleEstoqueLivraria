@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleEstoqueLivraria.DATA", "ControleEstoqueLivraria.DATA\ControleEstoqueLivraria.DATA.csproj", "{90E60898-06CF-4D7D-8BB9-4AD3BD5CE871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleEmprestimoLivraria.WEB", "ControleEmprestimoLivraria.WEB\ControleEmprestimoLivraria.WEB.csproj", "{0AC4F862-281C-46CB-9894-CF6B26934477}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90E60898-06CF-4D7D-8BB9-4AD3BD5CE871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E60898-06CF-4D7D-8BB9-4AD3BD5CE871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E60898-06CF-4D7D-8BB9-4AD3BD5CE871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E60898-06CF-4D7D-8BB9-4AD3BD5CE871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC4F862-281C-46CB-9894-CF6B26934477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC4F862-281C-46CB-9894-CF6B26934477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC4F862-281C-46CB-9894-CF6B26934477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC4F862-281C-46CB-9894-CF6B26934477}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AD51059-6F92-408B-93DA-53044A56FA1B}
+	EndGlobalSection
+EndGlobal
