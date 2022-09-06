@@ -1,7 +1,7 @@
 ﻿
 // Cep
 jQuery(function ($) {
-    $("input[name='cep']").change(function () {
+    $("input[id='campoEndereco']").change(function () {
         var cep_code = $(this).val();
         if (cep_code.length <= 0) return;
         $.get("https://apps.widenet.com.br/busca-cep/api/cep.json", { code: cep_code }, function (result) {
@@ -9,7 +9,7 @@ jQuery(function ($) {
                 alert(result.message || "cep não encontrado!");
                 return;
             }
-            $("input[name='cep']").val(result.code);
+            $("input[id='campoEndereco']").val(result.code);
             $("input[name='estado']").val(result.state);
             $("input[name='cidade']").val(result.city);
             $("input[name='bairro']").val(result.district);
