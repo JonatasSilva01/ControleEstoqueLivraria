@@ -1,34 +1,30 @@
-﻿@model IEnumerable<ControleEstoqueLivraria.DATA.Models.Cliente>
+﻿@model IEnumerable<ControleEstoqueLivraria.DATA.Models.Livro>
+
 @{
-    ViewData["Title"] = "Tabela de Clientes";
+    ViewData["Title"] = "Index";
 }
 
-<h1> Clientes </h1>
+<h1>Criação de Tabelas</h1>
 
 <div class="d-flex justify-content-end">
     <p class="text-body">
         <a class="btn btn-primary" asp-action="Create">
-            Cadastrar novo Cliente
+            Cadastrar novo Livro
         </a>
     </p>
 </div>
+
 <table class="table" id="myTable">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco)
+                @Html.DisplayNameFor(model => model.Autor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bairro)
+                @Html.DisplayNameFor(model => model.Editora)
             </th>
             <th></th>
         </tr>
@@ -37,19 +33,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
+                @Html.DisplayFor(modelItem => item.Autor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro)
+                @Html.DisplayFor(modelItem => item.Editora)
             </td>
             <td>
                 <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.Id">Edit</a> |
@@ -64,11 +54,11 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="DeleteModalLabel">Exluindo o cliente @item.Nome !!</h5>
+                        <h5 class="modal-title" id="DeleteModalLabel">@item.Nome !!</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label=""></button>
                       </div>
                       <div class="modal-body">
-                        <p><strong> Deseja excluir o cliete @item.Nome ?</strong></p>
+                        <p><strong> Deseja excluir o livro @item.Nome ?</strong></p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Não</button>

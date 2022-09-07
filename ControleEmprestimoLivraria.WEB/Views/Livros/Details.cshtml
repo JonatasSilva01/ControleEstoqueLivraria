@@ -1,0 +1,54 @@
+﻿@model ControleEstoqueLivraria.DATA.Models.Livro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes de livro</h1>
+
+<div class="row">
+    <div class="d-flex justify-content-end">
+        <div class="p-2">
+            <a class="btn btn-dark" asp-action="Index">Voltar para Tabela</a>
+        </div>
+        <div class="p-2">
+            <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model?.Id">Editar Livro</a>
+        </div>
+    </div>
+    <div class="col-md-12 mt-2">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="card">
+                <div class="card-header">
+                    <strong>Dados do livro</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-around">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="Nome" class="control-label"></label>
+                                <input asp-for="Nome" class="form-control" id="campoNome" readonly/>
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="Autor" class="control-label"></label>
+                                <input asp-for="Autor" class="form-control" id="campoAutor" readonly />
+                                <span asp-validation-for="Autor" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="Editora" class="control-label"></label>
+                                <input asp-for="Editora" class="form-control" id="campoEditora" readonly />
+                                <span asp-validation-for="Editora" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
