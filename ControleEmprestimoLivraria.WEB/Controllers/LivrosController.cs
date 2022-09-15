@@ -34,5 +34,28 @@ namespace ControleEmprestimoLivraria.WEB.Controllers
             Livro oLivro = onLivroServices.onRepositoryLivro.Selecionar_Pk(id);
             return View(oLivro);
         }
+
+        public IActionResult Edit(int id)
+        {
+            Livro oLivro = onLivroServices.onRepositoryLivro.Selecionar_Pk(id);
+            return View(oLivro);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Livro model)
+        {
+            Livro livro = onLivroServices.onRepositoryLivro.Alterar(model);
+
+            int id = livro.Id;
+
+            return RedirectToAction("Details", new { id });
+        }
+        
+        public IActionResult Delete(int id)
+        {
+            onLivroServices.onRepositoryLivro.Excluir(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }

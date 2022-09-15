@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ControleEstoqueLivraria.DATA.Interfaces
 {
-    internal interface IRepositoryLivro : IRepository<Livro>
+    public interface IRepositoryLivro : IRepository<Livro>
     {
     }
 }
